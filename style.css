@@ -1,0 +1,28 @@
+body
+{
+  display: flex;
+  justify-content: center;
+  background-image: url(hd.jpg);
+}
+
+#pk 
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 70%;
+  background-color:gray;
+    
+  animation: bounce 0.7s;
+  animation-direction:alternate-reverse;
+  animation-timing-function: cubic-bezier(4,0.5,1,.4);
+  animation-iteration-count:infinite;
+}
+
+@keyframes bounce 
+{
+  from { transform: translate3d(0, 0, 0);}
+  to   { transform: translate3d(0, 700px, 0);}
+
+  transition-property: width, height, background-color, transform;
+  transition-duration: 1s, 2s, 2s, 1s;
+}
